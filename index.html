@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Drawings, mixed media and photography by Thy Nguyen.">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Thy Nguyen Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;1,400&family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: one long hanging, on paper for the drawings and in a darkened room for the photographs. */
+:root{--paper:#f5f3f0;--ink:#100e0c;--ink-2:#5c554d;--night:#12110c;--lamp:#efe6d2;--lamp-2:#a89f8b;--oxide:#c8200f;--amber:#e0b75a;
+--bar-bg:var(--paper);--bar-fg:var(--ink);--gap:clamp(6px,.8vw,12px);
+--display:"Playfair Display",Didot,"Bodoni MT",Georgia,serif;--script:"Pinyon Script","Snell Roundhand",cursive;--sign:"Pinyon Script","Snell Roundhand",cursive;--body:"Public Sans","Helvetica Neue",Arial,sans-serif;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{background:var(--paper);color:var(--ink);font:400 clamp(16px,1.05vw,18px)/1.65 var(--body);letter-spacing:.012em;overflow-x:hidden}
+body.night{--bar-bg:var(--night);--bar-fg:var(--lamp)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bar-bg)}
+.wrap{max-width:1360px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media(min-width:720px){.wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:2px solid var(--oxide);outline-offset:3px}
+figure{margin:0;min-width:0}p{margin:0}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bar-bg);color:var(--bar-fg);transition:background .35s,color .35s}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;height:52px}
+.bar .me{font:400 26px/1 var(--sign);text-decoration:none;white-space:nowrap}
+.bar ul{display:flex;gap:clamp(12px,2.4vw,32px);list-style:none;margin:0;padding:0}
+.bar li a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding-block:8px;background:linear-gradient(currentColor,currentColor) 0 90%/0 1px no-repeat;transition:background-size .25s}
+.bar li a:hover{background-size:100% 1px}
+@media(max-width:520px){.bar .opt{display:none}.bar li a{font-size:11px;letter-spacing:.12em}}
+.sw{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:1;margin:0;letter-spacing:0;text-wrap:balance;display:block}
+.sw .i{font-family:var(--script);text-transform:none;font-size:1.95em;line-height:0;margin-right:.02em;vertical-align:-.03em}
+.sw .r{position:relative}
+h2.sw{font-size:clamp(46px,8.6vw,132px)}
+h3.sw{font-size:clamp(34px,5vw,76px)}
+.hero{position:relative;display:grid;place-items:center;min-height:clamp(340px,56vw,720px);overflow:hidden;background:#5d4326}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero h1{position:relative;color:#fff;font-size:clamp(50px,11.6vw,188px);padding-inline:16px}
+.credits{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;padding-block:28px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase}
+.credits p:nth-child(even){text-align:right}.credits a{text-underline-offset:3px}
+@media(max-width:620px){.credits{grid-template-columns:1fr}.credits p:nth-child(even){text-align:left}.credits p:nth-child(3){order:4}.credits p:nth-child(2){order:2}.credits p:nth-child(4){order:3}}
+section{padding-block:clamp(56px,9vw,130px)}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.82fr);gap:clamp(32px,6vw,96px);align-items:center}
+.intro h2{font:italic 400 clamp(46px,6.6vw,96px)/1.05 var(--display);margin:0 0 .45em;letter-spacing:-.01em}
+.prose{display:grid;gap:1.05em;max-width:62ch}
+.sig{font:400 clamp(38px,4.2vw,58px)/1 var(--sign);margin-top:.3em;justify-self:end;padding-right:1ch}
+.z{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in;overflow:hidden}
+.z img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.z:hover img{transform:scale(1.018)}
+.opener{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,5vw,80px);align-items:start}
+.opener .txt{position:sticky;top:90px;display:grid;gap:clamp(24px,3vw,44px)}
+.meta{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
+.work{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(24px,4.5vw,72px);align-items:center;margin-top:clamp(64px,9vw,130px)}
+.work.flip{grid-template-columns:minmax(0,1fr) minmax(0,1.55fr)}
+.stack{display:grid;gap:clamp(20px,2.4vw,34px)}
+.process{display:grid;grid-template-columns:clamp(110px,14vw,180px) minmax(0,1fr);gap:16px;align-items:end;font-size:13px;color:var(--ink-2)}
+.chapter{margin-top:clamp(72px,11vw,160px)}
+.chapter>.sw{margin-bottom:clamp(24px,3.4vw,48px)}
+.g{display:grid;gap:var(--gap)}
+.two{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:repeat(3,minmax(0,1fr))}.four{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tall2 figure:first-child{grid-row:span 2}
+.samsa{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,2vw,30px);align-items:center}
+.cap{margin-top:14px;font-size:15px;max-width:62ch}
+.cap.r{margin-left:auto;text-align:right}
+.after{margin-top:clamp(20px,2.6vw,36px);max-width:92ch}
+.pencil{grid-template-columns:minmax(0,1.67fr) minmax(0,1fr);align-items:stretch}
+.music{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.97fr);gap:clamp(20px,2.5vw,36px);align-items:start;position:relative}
+.music .left{display:grid;gap:20px}
+.music .rt{position:relative;margin-top:clamp(24px,5vw,72px)}
+.tape{position:absolute;width:clamp(110px,14vw,210px);height:auto;top:-22px;left:-7%;transform:rotate(-2deg);z-index:2;pointer-events:none;opacity:.9}
+.track{font-size:15px;text-align:right;line-height:1.6}
+.surreal{display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1fr) minmax(0,1fr);gap:var(--gap);align-items:end}
+.surreal .side{display:grid;gap:var(--gap)}
+.surreal .txt{font-size:15px;text-align:right;padding-right:clamp(0px,1vw,14px)}
+.dark{background:var(--night);color:var(--lamp);--ink-2:var(--lamp-2);padding-block:0}
+.dark a:focus-visible,.dark button:focus-visible{outline-color:var(--amber)}
+.phero{position:relative;overflow:hidden;background:#222}
+.phero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.frames{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,6.4vw,110px);max-width:1000px;margin-inline:auto;padding:clamp(48px,8vw,110px) max(16px,env(safe-area-inset-right,0px))}
+.frames figure{background:#fff;padding:clamp(5px,.75vw,11px);aspect-ratio:1}
+.dark h2.sw{padding-top:clamp(44px,7vw,100px);text-align:center}
+.block{padding-block:clamp(36px,5vw,76px)}
+.block.first{padding-top:clamp(56px,7vw,100px)}
+.city{grid-template-columns:1.15fr .9fr 1.15fr;grid-template-rows:repeat(12,minmax(0,clamp(24px,5.1vw,76px)))}
+.city figure:nth-child(1){grid-area:1/1/9/2}.city figure:nth-child(2){grid-area:9/1/13/2}
+.city figure:nth-child(3){grid-area:1/2/4/3}.city figure:nth-child(4){grid-area:4/2/10/3}.city figure:nth-child(5){grid-area:10/2/13/3}
+.city figure:nth-child(6){grid-area:1/3/5/4}.city figure:nth-child(7){grid-area:5/3/13/4}
+.land{grid-template-columns:2fr 1fr}.land .a{grid-area:1/1/2/2;aspect-ratio:3.78}.land .b{grid-area:2/1/3/2;aspect-ratio:1.86}.land .c{grid-area:1/2/2/2}
+.land2{display:grid;gap:var(--gap);grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+.land2 .col{display:grid;gap:var(--gap)}
+.banner{position:relative;overflow:hidden;aspect-ratio:16/9;max-height:92vh;width:100%}
+.banner>img{width:100%;height:100%;object-fit:cover;display:block}
+.banner h3{position:absolute;left:max(16px,6vw);top:clamp(18px,6vw,84px);color:#fff;text-shadow:0 1px 18px rgba(20,24,8,.55)}
+.banner h3 .second{display:block;margin-top:.1em}
+.solitude{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,3.4vw,56px)}
+.solitude figure{aspect-ratio:.68}
+.haze{grid-template-columns:repeat(6,minmax(0,1fr))}.haze figure:nth-child(-n+2){grid-column:span 3;aspect-ratio:2.2}.haze figure:nth-child(n+3){grid-column:span 2;aspect-ratio:1.47}
+.muse{position:relative;background:#110d07;overflow:hidden}
+.muse>img{display:block;width:100%;min-height:560px;max-height:96vh;object-fit:cover;object-position:60% 50%}
+.muse .over{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-start;padding-block:clamp(36px,7vw,100px);background:linear-gradient(90deg,rgba(13,10,4,.82) 0,rgba(13,10,4,.55) 34%,transparent 58%)}
+.muse .wrap{width:100%}
+.muse h2{color:#fff;margin-bottom:.35em}
+.muse h2.sw{font-size:clamp(46px,7.4vw,112px);padding-top:0;text-align:left}
+.muse .prose{max-width:38ch;color:#fff}
+.polaroid{position:absolute;right:clamp(16px,7vw,110px);top:32%;width:clamp(150px,18vw,280px);background:#fff;padding:3.2% 1.6% 0;padding:clamp(8px,1vw,15px) clamp(8px,1vw,15px) clamp(34px,4vw,58px);transform:rotate(-4deg);box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.polaroid .z{aspect-ratio:1.06}
+.muserow{grid-template-columns:2fr 1fr}.muserow .col{display:grid;gap:var(--gap)}
+.ball{grid-template-columns:repeat(6,minmax(0,1fr));position:relative}.ball figure:nth-child(-n+2){grid-column:span 3;aspect-ratio:1.85}.ball figure:nth-child(n+3){grid-column:span 2;aspect-ratio:1.22}
+.ballhead{text-align:center;margin-bottom:clamp(20px,3vw,40px)}
+.ballhead .s2{display:block;margin-top:.08em}
+.end{display:grid;grid-template-columns:repeat(24,minmax(0,1fr));align-items:start}
+.end h2{grid-area:1/1/2/12;font-size:clamp(46px,7.4vw,112px);align-self:center;z-index:2;letter-spacing:.005em}
+.end .col{grid-area:1/11/4/25}
+.end .bw{grid-area:2/1/5/15;position:relative;margin-top:clamp(16px,2vw,28px)}
+.end .tape{top:-18px;left:-3%;transform:rotate(-7deg);z-index:3}
+.end .col{z-index:2}
+.end .note{grid-area:4/15/5/25;align-self:end;text-align:right;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;padding-top:16px}
+@media(max-width:760px){
+.intro,.opener,.work,.work.flip,.samsa,.music,.surreal,.land2,.muserow{grid-template-columns:minmax(0,1fr)}
+.opener .txt{position:static}.work.flip>.stack{order:2}
+.surreal .txt{text-align:left}.track{text-align:left}.surreal .side{grid-template-columns:1fr 1fr}
+.haze figure:nth-child(n){grid-column:span 6;aspect-ratio:1.6}.ball figure:nth-child(n){grid-column:span 6;aspect-ratio:1.6}
+.solitude{grid-template-columns:1fr 1fr}.solitude figure:first-child{grid-column:span 2;aspect-ratio:.9}
+.city{grid-template-columns:1fr 1fr;grid-template-rows:none}.city figure:nth-child(n){grid-area:auto}.city figure:nth-child(1),.city figure:nth-child(6),.city figure:nth-child(7){grid-column:span 2}
+.tall2{grid-template-columns:minmax(0,1fr)}.pencil{grid-template-columns:minmax(0,1fr)}
+.banner{aspect-ratio:1.15}
+.muse>img{display:none}.muse .over{position:static;background:none;padding-block:44px 28px}.muse .ph{display:block}.polaroid{display:none}
+.end h2{grid-area:auto;grid-column:1/-1;margin-bottom:16px}.end .col,.end .bw,.end .note{grid-area:auto;grid-column:1/-1}.end .bw{margin-top:-14px;width:78%}.end .note{text-align:left}
+}
+@media(min-width:761px){.muse .ph{display:none}}
+dialog{border:0;padding:0;margin:0;width:100%;height:100%;max-width:none;max-height:none;background:rgba(10,9,7,.96);color:var(--lamp)}
+dialog[open]{display:grid;grid-template-rows:minmax(0,1fr) auto}
+dialog::backdrop{background:rgba(10,9,7,.96)}
+.lb-stage{display:flex;align-items:center;justify-content:center;min-height:0;padding:max(56px,env(safe-area-inset-top,0px)) 16px 8px}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain}
+.lb-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(16px,env(safe-area-inset-right,0px)) calc(14px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb-cap{font-size:14px;min-width:0}
+.lb-btns{display:flex;gap:6px;flex:none}
+.lb-btn{background:none;border:1px solid rgba(239,230,210,.35);color:inherit;font:13px/1 var(--body);min-width:44px;height:44px;padding:0 12px;cursor:pointer}
+.lb-btn:hover{background:rgba(239,230,210,.14)}
+.lb-x{position:absolute;right:max(14px,env(safe-area-inset-right,0px));top:max(10px,env(safe-area-inset-top,0px))}
+footer{padding-block:28px 44px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav class="bar" aria-label="Sections"><div class="wrap"><a class="me" href="#top">Thy</a><ul>
+<li class="opt"><a href="#introduction">Introduction</a></li><li><a href="#drawings">Drawings</a></li><li><a href="#photography">Photography</a></li><li><a href="#my-muse">My Muse</a></li></ul></div></nav>
+<header id="top" class="hero"><img src="images/cover.jpg" alt="" fetchpriority="high"><h1 class="sw"><span class="i">P</span><span class="r">ortfolio</span></h1></header>
+<div class="wrap credits"><p>Artworks, design &amp; photography</p><p>By Thy Nguyen</p><p>Canon M10</p><p><a href="https://vsco.co/elliefvev/gallery">vsco.co/elliefvev/gallery</a></p></div>
+
+<section id="introduction" class="wrap intro"><div><h2>Introduction</h2><div class="prose">
+<p>Hi I’m Thy. I’m currently a sophomore studying Finance &amp; Business Analytics at Indiana University’s Kelley School of Business.</p>
+<p>Alongside my interest in math &amp; business, I’ve always had a thing for art! This portfolio documents my progress through various mediums: painting, design, photography, philosophy and literature.</p>
+<p>My art style is loose and abstract, shaped by emotion, experimentation, and what I call the <em>“Art of Noticing”</em>: paying attention to small details and patterns, and to the feelings they stir. Later, you’ll see some of those feelings transpose themselves onto my canvas.</p>
+<p>Alright enough words! I’m so glad you’re here, and I hope you enjoy looking around.</p>
+<p class="sig">with love, Thy</p></div></div>
+<figure><button class="z" type="button" data-cap="Thy" aria-label="View larger: Thy standing on a lane beside a stone wall, cottages and walkers behind her"><img src="images/portrait.jpg" width="1202" height="1475" alt="Thy standing on a lane beside a stone wall, cottages and walkers behind her" loading="lazy"></button></figure></section>
+
+<section id="drawings" class="wrap">
+<div class="opener"><div class="txt"><h2 class="sw"><span class="i">D</span><span class="r">rawings</span></h2><p class="meta">2021–2025</p><div class="prose">
+<p>Here are some of my drawings from 2021-2025. I do not have a specific topic to convey through my art. My work begins with emotion rather than a predetermined subject or message. I use expressive lines, abstract shapes, and bold color to create compositions that feel visually alive and satisfying to make.</p>
+<p>My favorite artists are Wassily Kandinsky, Helen Frankenthaler, Frida Kahlo and Wangechi Mutu. I’m drawn to the way they each make art feel personal, whether through bold color and abstraction, intimate self-portraiture, or imaginative transformations of the human body.</p></div></div>
+<figure><button class="z" type="button" data-cap="Drawings, 2021–2025" aria-label="View larger: Marker drawing of a wide-mouthed figure with a hair bun, surrounded by hearts, stars, a snowman and mushrooms"><img src="images/drawing-cover.jpg" width="1350" height="1800" alt="Marker drawing of a wide-mouthed figure with a hair bun, surrounded by hearts, stars, a snowman and mushrooms" loading="lazy"></button></figure></div>
+
+<div class="work"><figure><button class="z" type="button" data-cap="First piece in my AP Art class." aria-label="View larger: Oil painting of a curled yellow figure on a red ground among pink, lily-like forms joined by yellow threads"><img src="images/ap-painting.jpg" width="1635" height="1227" alt="Oil painting of a curled yellow figure on a red ground among pink, lily-like forms joined by yellow threads" loading="lazy"></button></figure>
+<div class="stack"><p>First piece in my AP Art class. I attempt to explore the <strong>fragility</strong> of human nature within the vast natural world. The curled figure suggests a primitive, vulnerable core, surrounded by forms that evoke the beauty and force of nature. Through this contrast, I challenge the idea that human beings—especially through the growth of <strong>AI and technology</strong>—have conquered nature; instead, the painting suggests that we remain deeply connected to—and shaped by—the natural world.</p>
+<div class="process"><figure><button class="z" type="button" data-cap="In progress" aria-label="View larger: The painting in progress, with the figure sketched in pencil"><img src="images/process-ap.jpg" width="1440" height="1440" alt="The painting in progress, with the figure sketched in pencil" loading="lazy"></button></figure><span>In progress</span></div></div></div>
+
+<div class="chapter"><h3 class="sw"><span class="i">T</span><span class="r">he Metamorphosis</span></h3>
+<div class="work flip" style="margin-top:0"><div class="stack"><p>This mixed-media piece, made with oil pastel, colored pencil, and crumpled craft paper, explores <strong>Metamorphosis</strong>.</p>
+<p>The idea that beneath everything we build to set ourselves apart, humans are never far from the animals we came from. The figure isn’t fighting the change. Her eyes are closed, almost peaceful, as if she is surrendering to it. We tend to think of nature as something that exists to nurture us, something gentle that gives. I wanted to show the other side of that relationship. Nature is also patient, and eventually it takes back what it gave. In this piece, the transformation isn’t a punishment or a loss. It’s a return to where we started.</p>
+<div class="process"><figure><button class="z" type="button" data-cap="In progress" aria-label="View larger: The piece on a work table among pastels, tissue boxes and fruit"><img src="images/process-meta.jpg" width="1440" height="1440" alt="The piece on a work table among pastels, tissue boxes and fruit" loading="lazy"></button></figure><span>In progress</span></div></div>
+<figure><button class="z" type="button" data-cap="The Metamorphosis. Oil pastel, colored pencil and crumpled craft paper." aria-label="View larger: Mixed-media work of a woman with closed eyes whose neck becomes an animal body with a red tail, with crumpled paper flowers"><img src="images/metamorphosis.jpg" width="1638" height="1155" alt="Mixed-media work of a woman with closed eyes whose neck becomes an animal body with a red tail, with crumpled paper flowers" loading="lazy"></button></figure></div></div>
+
+<div class="chapter"><h3 class="sw" style="text-transform:none;font-style:italic;letter-spacing:-.01em">Gregor Samsa</h3>
+<div class="samsa"><p>My exploration of <em>The Metamorphosis</em> led me to Kafka’s Gregor Samsa, and these portraits are my imagining of him.</p>
+<figure><button class="z" type="button" data-cap="Gregor Samsa" aria-label="View larger: Collage of a man in a suit with a beetle over his eye, among fabric, trains and boots"><img src="images/samsa-1.jpg" width="1014" height="1015" alt="Collage of a man in a suit with a beetle over his eye, among fabric, trains and boots" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Gregor Samsa" aria-label="View larger: Collage of a monochrome head broken by vividly painted blue, magenta and orange facial fragments"><img src="images/samsa-2.jpg" width="1014" height="1015" alt="Collage of a monochrome head broken by vividly painted blue, magenta and orange facial fragments" loading="lazy"></button></figure></div>
+<p class="after">Metamorphosis raises an uncomfortable question: if the human form can change so completely, what made us human to begin with? We see ourselves as separate from nature, but metamorphosis reveals that we are still bodies, still creatures, still subject to forces beyond our control. These pieces capture that moment when the line between human and nature stops holding.</p></div>
+
+<div class="chapter"><h3 class="sw"><span class="i">O</span><span class="r">rganic</span></h3>
+<div class="g two tall2"><figure><button class="z" type="button" data-cap="Organic" aria-label="View larger: Watercolor of dark, bleeding flowers in magenta, green and violet"><img src="images/organic-1.jpg" width="1369" height="1365" alt="Watercolor of dark, bleeding flowers in magenta, green and violet" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Organic" aria-label="View larger: Painted close view of a yellow and pink flower with abstract forms at right"><img src="images/organic-2.jpg" width="1370" height="672" alt="Painted close view of a yellow and pink flower with abstract forms at right" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Organic" aria-label="View larger: Pale watercolor flowers in pink, blue and ochre"><img src="images/organic-3.jpg" width="1370" height="672" alt="Pale watercolor flowers in pink, blue and ochre" loading="lazy"></button></figure></div></div>
+
+<div class="chapter"><div class="g pencil"><figure><button class="z" type="button" data-cap="Experiment with color pencils and self-portrait." aria-label="View larger: Colored pencil abstraction in orange, yellow and blue"><img src="images/pencil-1.jpg" width="1648" height="1174" alt="Colored pencil abstraction in orange, yellow and blue" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Experiment with color pencils and self-portrait." aria-label="View larger: Green and magenta pencil self-portrait with Chinese characters beside the head"><img src="images/pencil-2.jpg" width="982" height="1345" alt="Green and magenta pencil self-portrait with Chinese characters beside the head" loading="lazy"></button></figure></div><p class="cap">Experiment with color pencils and self-portrait.</p></div>
+
+<div class="chapter music"><div class="left"><figure><button class="z" type="button" data-cap="Free drawing with music. Champion – Obito." aria-label="View larger: Dense oil pastel abstraction in a spiral sketchbook"><img src="images/music-left.jpg" width="1344" height="1008" alt="Dense oil pastel abstraction in a spiral sketchbook" loading="lazy"></button></figure>
+<p class="track">Free drawing with music. Tracks listened:<br>Bloodhail – Have a nice life (right)<br>Champion – Obito (left)</p></div>
+<div class="rt"><img class="tape" src="images/tape.png" alt="" width="327" height="147"><figure><button class="z" type="button" data-cap="Free drawing with music. Bloodhail – Have a nice life." aria-label="View larger: Linear paint drawing of a bird-like form in teal, yellow and black on tan paper"><img src="images/music-right.jpg" width="1302" height="1368" alt="Linear paint drawing of a bird-like form in teal, yellow and black on tan paper" loading="lazy"></button></figure></div></div>
+
+<div class="chapter"><h3 class="sw"><span class="i">S</span><span class="r">urrealism Era</span></h3>
+<div class="surreal"><p class="txt">A distinct era of my art journey. Emphasis on expressionism &amp; unrealistic figures.</p>
+<figure><button class="z" type="button" data-cap="Surrealism Era" aria-label="View larger: Oil pastel face in profile with a beak-like nose and black mass at the chin"><img src="images/surreal-1.jpg" width="922" height="1235" alt="Oil pastel face in profile with a beak-like nose and black mass at the chin" loading="lazy"></button></figure><div class="side"><figure><button class="z" type="button" data-cap="Surrealism Era" aria-label="View larger: Oil pastel sketchbook spread with a peacock-eye form, poppy and violet flower"><img src="images/surreal-2.jpg" width="925" height="694" alt="Oil pastel sketchbook spread with a peacock-eye form, poppy and violet flower" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Surrealism Era" aria-label="View larger: Oil pastel spread of fish-like forms on yellow and blue"><img src="images/surreal-3.jpg" width="925" height="694" alt="Oil pastel spread of fish-like forms on yellow and blue" loading="lazy"></button></figure></div></div></div>
+</section>
+
+<section id="photography" class="dark">
+<div class="phero"><img src="images/motion-bg.jpg" alt="" loading="lazy"><div class="frames"><figure><button class="z" type="button" data-cap="" aria-label="View larger: Black-and-white photo of a car blurred in motion past trees"><img src="images/motion-1.jpg" width="448" height="450" alt="Black-and-white photo of a car blurred in motion past trees" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: Black-and-white long exposure, a car dissolved into a band of light"><img src="images/motion-2.jpg" width="449" height="450" alt="Black-and-white long exposure, a car dissolved into a band of light" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: Black-and-white photo of a parking lot framed by trees"><img src="images/motion-3.jpg" width="450" height="450" alt="Black-and-white photo of a parking lot framed by trees" loading="lazy"></button></figure></div></div>
+<div class="wrap"><h2 class="sw"><span class="i">P</span><span class="r">hotography</span></h2>
+
+<div class="block first land2"><div class="col"><figure><button class="z" type="button" data-cap="" aria-label="View larger: Stonehenge against a pale blue sky"><img src="images/land-stones.jpg" width="1800" height="472" alt="Stonehenge against a pale blue sky" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: A lake between autumn-colored wooded hills"><img src="images/land-lake.jpg" width="1800" height="964" alt="A lake between autumn-colored wooded hills" loading="lazy"></button></figure></div><div class="col"><figure><button class="z" type="button" data-cap="" aria-label="View larger: Curved stepped weir with white water and resting gulls"><img src="images/land-weir.jpg" width="918" height="741" alt="Curved stepped weir with white water and resting gulls" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: White lilies emerging from darkness"><img src="images/land-lily.jpg" width="918" height="725" alt="White lilies emerging from darkness" loading="lazy"></button></figure></div></div>
+
+<div class="block g three city"><figure><button class="z" type="button" data-cap="" aria-label="View larger: City towers and a river bridge seen past transit seats marked Priority Seat"><img src="images/city.jpg" width="1800" height="1011" alt="City towers and a river bridge seen past transit seats marked Priority Seat" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: A belted black and white cow grazing"><img src="images/cow.jpg" width="1065" height="598" alt="A belted black and white cow grazing" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: A motel balcony hung with rugs"><img src="images/balcony.jpg" width="807" height="454" alt="A motel balcony hung with rugs" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: Red and white koi from above"><img src="images/koi.jpg" width="1127" height="751" alt="Red and white koi from above" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: Pink bougainvillea against a brick wall and signpost"><img src="images/bricks.jpg" width="833" height="465" alt="Pink bougainvillea against a brick wall and signpost" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: Swans on the water below a stepped weir"><img src="images/swans.jpg" width="1067" height="597" alt="Swans on the water below a stepped weir" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: Pink lilies in a blue and white jug in a dim room"><img src="images/lilies.jpg" width="1012" height="1800" alt="Pink lilies in a blue and white jug in a dim room" loading="lazy"></button></figure></div>
+
+<div class="block"><div class="g two tall2"><figure><button class="z" type="button" data-cap="Pasadena, CA. 2024" aria-label="View larger: A person seen from behind before a red salmon sandwich banner"><img src="images/pas-1.jpg" width="1234" height="1129" alt="A person seen from behind before a red salmon sandwich banner" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Pasadena, CA. 2024" aria-label="View larger: A person walks past a shuttered storefront under a red sign"><img src="images/pas-2.jpg" width="1235" height="555" alt="A person walks past a shuttered storefront under a red sign" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Pasadena, CA. 2024" aria-label="View larger: A person at the door numbered 1531, seen from behind"><img src="images/pas-3.jpg" width="1235" height="555" alt="A person at the door numbered 1531, seen from behind" loading="lazy"></button></figure></div><p class="cap">Pasadena, CA. 2024</p></div>
+
+<div class="block g two"><figure><button class="z" type="button" data-cap="" aria-label="View larger: Silhouettes in a tall sunlit hall"><img src="images/street-1.jpg" width="1498" height="999" alt="Silhouettes in a tall sunlit hall" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: A man and a young child waiting at a street crossing"><img src="images/street-2.jpg" width="1498" height="999" alt="A man and a young child waiting at a street crossing" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: A driver in a dusty dark SUV on a shopping street"><img src="images/street-3.jpg" width="1499" height="1005" alt="A driver in a dusty dark SUV on a shopping street" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="" aria-label="View larger: A toddler in a pink sun hat in dappled shade"><img src="images/street-4.jpg" width="1498" height="999" alt="A toddler in a pink sun hat in dappled shade" loading="lazy"></button></figure></div>
+</div>
+
+<div class="banner"><img src="images/haze-banner.jpg" alt="People walking along a garden path in strong sun" loading="lazy" width="1800" height="1200"><h3 class="sw"><span class="i">P</span><span class="r">eople</span><span class="r second">in sunhaze</span></h3></div>
+<div class="wrap">
+<div class="block first"><div class="g solitude"><figure><button class="z" type="button" data-cap="Longing in solitude. Old Towne Orange, CA." aria-label="View larger: A man asleep on a bench beneath tall windows, two people passing"><img src="images/solitude-1.jpg" width="892" height="1345" alt="A man asleep on a bench beneath tall windows, two people passing" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Longing in solitude. Old Towne Orange, CA." aria-label="View larger: The man on the bench partly hidden by blurred passers-by"><img src="images/solitude-2.jpg" width="964" height="1345" alt="The man on the bench partly hidden by blurred passers-by" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Longing in solitude. Old Towne Orange, CA." aria-label="View larger: The man on the bench as a couple walks away"><img src="images/solitude-3.jpg" width="893" height="1345" alt="The man on the bench as a couple walks away" loading="lazy"></button></figure></div><p class="cap" style="display:flex;justify-content:space-between;gap:16px;max-width:none"><span>Longing in solitude</span><span>Old Towne Orange, CA.</span></p></div>
+<div class="block"><div class="g haze"><figure><button class="z" type="button" data-cap="People in Sunhaze" aria-label="View larger: Small figures in a pool of sun under oaks"><img src="images/haze-1.jpg" width="1234" height="555" alt="Small figures in a pool of sun under oaks" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="People in Sunhaze" aria-label="View larger: Three women walking toward a garden gate"><img src="images/haze-2.jpg" width="1235" height="555" alt="Three women walking toward a garden gate" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="People in Sunhaze" aria-label="View larger: Garden path with walkers and red blooms"><img src="images/haze-3.jpg" width="816" height="555" alt="Garden path with walkers and red blooms" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="People in Sunhaze" aria-label="View larger: A seated person on a bench reading a phone in deep shade"><img src="images/haze-4.jpg" width="816" height="555" alt="A seated person on a bench reading a phone in deep shade" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="People in Sunhaze" aria-label="View larger: A family on rocks in dark foliage"><img src="images/haze-5.jpg" width="816" height="555" alt="A family on rocks in dark foliage" loading="lazy"></button></figure></div>
+<p class="cap" style="max-width:68ch;margin-top:22px">There’s a melancholy feeling in seeing people lost in sun haze. The bright daylight and vast open space makes me feel entirely exposed, and strangely lonely.<br>It’s funny how grief and tragedy are often shown in the rain, when daylight can engender the same, at times—even a more intense feeling.</p></div>
+<div class="block"><div class="g two"><figure><button class="z" type="button" data-cap="Dorm light." aria-label="View larger: Sun flaring through a dark tree"><img src="images/dorm-1.jpg" width="1272" height="687" alt="Sun flaring through a dark tree" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Dorm light." aria-label="View larger: A polished hallway with amber reflections"><img src="images/dorm-2.jpg" width="1271" height="687" alt="A polished hallway with amber reflections" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Dorm light." aria-label="View larger: A corridor toward a bright window under an exit sign"><img src="images/dorm-3.jpg" width="1272" height="687" alt="A corridor toward a bright window under an exit sign" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Dorm light." aria-label="View larger: Shadow and yellow light across a green dorm door"><img src="images/dorm-4.jpg" width="1271" height="687" alt="Shadow and yellow light across a green dorm door" loading="lazy"></button></figure></div><p class="cap">Dorm light.</p></div>
+</div>
+
+<div id="my-muse" class="muse"><img src="images/muse-1.jpg" alt="Thy’s father at a café table, half lit by the window" loading="lazy">
+<div class="over"><div class="wrap"><h2 class="sw"><span class="i">M</span><span class="r">y Muse</span></h2><div class="prose"><p>Someone who appears often in my work is my father. I’ve found immense joy in taking candid photos of him. It was when he’s unguarded and at peace, and his thoughts evident on his expressions.</p>
+<p>Somehow, photographing him feels like it heals something in our relationship. It lets me see him not only through the old, sometimes rigid image I had of my father, but as a more authentic and vivid person.</p></div></div></div>
+<div class="ph"><figure><button class="z" type="button" data-cap="My Muse" aria-label="View larger: Thy’s father at a café table, half lit by the window"><img src="images/muse-1.jpg" width="1800" height="1202" alt="Thy’s father at a café table, half lit by the window" loading="lazy"></button></figure></div>
+<div class="polaroid"><figure><button class="z" type="button" data-cap="My Muse" aria-label="View larger: Polaroid-style print of the same café photograph"><img src="images/muse-1.jpg" width="1800" height="1202" alt="Polaroid-style print of the same café photograph" loading="lazy"></button></figure></div></div>
+<div class="wrap">
+<div class="block first g muserow"><figure><button class="z" type="button" data-cap="My Muse" aria-label="View larger: Thy’s father reading in a café hall as a figure blurs past"><img src="images/muse-2.jpg" width="1800" height="1503" alt="Thy’s father reading in a café hall as a figure blurs past" loading="lazy"></button></figure><div class="col"><figure><button class="z" type="button" data-cap="My Muse" aria-label="View larger: A man from behind shading his eyes on a sunlit street"><img src="images/muse-3.jpg" width="910" height="753" alt="A man from behind shading his eyes on a sunlit street" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="My Muse" aria-label="View larger: A man in a denim jacket and backpack at a crossing in Orange"><img src="images/muse-4.jpg" width="910" height="751" alt="A man in a denim jacket and backpack at a crossing in Orange" loading="lazy"></button></figure></div></div>
+<div class="block"><div class="ballhead"><h3 class="sw"><span class="i">B</span><span class="r">asketball</span></h3><span class="sw s2" style="font-size:clamp(34px,5vw,76px)">Shots</span></div>
+<div class="g ball"><figure><button class="z" type="button" data-cap="Basketball shots" aria-label="View larger: Blurred fast break past number 10"><img src="images/ball-1.jpg" width="1423" height="768" alt="Blurred fast break past number 10" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Basketball shots" aria-label="View larger: A player dribbling low against a defender"><img src="images/ball-2.jpg" width="1423" height="768" alt="A player dribbling low against a defender" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Basketball shots" aria-label="View larger: The ball dropping at the rim above a crowd of players"><img src="images/ball-3.jpg" width="940" height="768" alt="The ball dropping at the rim above a crowd of players" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Basketball shots" aria-label="View larger: Number 22 chasing a dribbler in white"><img src="images/ball-4.jpg" width="940" height="768" alt="Number 22 chasing a dribbler in white" loading="lazy"></button></figure><figure><button class="z" type="button" data-cap="Basketball shots" aria-label="View larger: Number 22 holding the ball overhead, guarded by number 21"><img src="images/ball-5.jpg" width="940" height="768" alt="Number 22 holding the ball overhead, guarded by number 21" loading="lazy"></button></figure></div></div>
+</div>
+</section>
+
+<section id="end" class="wrap" style="padding-bottom:clamp(40px,5vw,70px)"><div class="end"><h2 class="sw">The End.</h2>
+<div class="col"><figure><button class="z" type="button" data-cap="" aria-label="View larger: Café kiosk with an orange frame in a tall hall, people blurring past"><img src="images/end-color.jpg" width="1437" height="957" alt="Café kiosk with an orange frame in a tall hall, people blurring past" loading="lazy"></button></figure></div>
+<div class="bw"><img class="tape" src="images/tape.png" alt="" width="327" height="147"><figure><button class="z" type="button" data-cap="" aria-label="View larger: The same hall in black and white"><img src="images/end-bw.jpg" width="1021" height="679" alt="The same hall in black and white" loading="lazy"></button></figure></div>
+<p class="note">All images are Thy’s personal works</p></div></section>
+
+<dialog id="lb" aria-label="Artwork viewer"><div class="lb-stage"><img id="lb-img" alt=""></div>
+<div class="lb-foot"><p class="lb-cap" id="lb-cap" aria-live="polite"></p><div class="lb-btns"><button class="lb-btn" id="lb-prev" type="button" aria-label="Previous image">Prev</button><button class="lb-btn" id="lb-next" type="button" aria-label="Next image">Next</button></div></div>
+<button class="lb-btn lb-x" id="lb-x" type="button">Close</button></dialog>
+<script>
+(function(){
+var d=document.getElementById('lb'),im=document.getElementById('lb-img'),cp=document.getElementById('lb-cap');
+var items=Array.prototype.filter.call(document.querySelectorAll('.z'),function(b){return !b.closest('.ph')&&!b.closest('.polaroid')});
+var extra=document.querySelectorAll('.ph .z,.polaroid .z'),i=0,last=null;
+function show(n){i=(n+items.length)%items.length;var b=items[i],t=b.querySelector('img');im.src=t.getAttribute('src');im.alt=t.alt;cp.textContent=b.dataset.cap||t.alt}
+function open(b){last=b;var n=items.indexOf(b);if(n<0){var s=b.querySelector('img').getAttribute('src');n=items.findIndex(function(x){return x.querySelector('img').getAttribute('src')===s});if(n<0){items.unshift(b);n=0}}show(n);d.showModal()}
+function bind(b){b.addEventListener('click',function(){open(b)})}
+items.forEach(bind);Array.prototype.forEach.call(extra,bind);
+document.getElementById('lb-prev').onclick=function(){show(i-1)};
+document.getElementById('lb-next').onclick=function(){show(i+1)};
+document.getElementById('lb-x').onclick=function(){d.close()};
+d.addEventListener('click',function(e){if(e.target===d||e.target.className==='lb-stage')d.close()});
+d.addEventListener('close',function(){im.removeAttribute('src');if(last)last.focus({preventScroll:true})});
+document.addEventListener('keydown',function(e){if(!d.open)return;if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});
+var ph=document.getElementById('photography'),end=document.getElementById('end');
+function tick(){var p=ph.getBoundingClientRect().top,q=end.getBoundingClientRect().top;document.body.classList.toggle('night',p<56&&q>56)}
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick();
+})();
+</script>
+</body>
+</html>
